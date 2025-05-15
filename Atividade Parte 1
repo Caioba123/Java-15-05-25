@@ -1,0 +1,118 @@
+
+import java.util.Scanner;
+
+public class MetrosParaCentimetros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o valor em metros: ");
+        double metros = sc.nextDouble();
+        double centimetros = metros * 100;
+        System.out.println("Valor em centímetros: " + centimetros);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class SalarioComGratificacao {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o salário base: ");
+        double salarioBase = sc.nextDouble();
+        double salarioReceber = (salarioBase * 1.10) - (salarioBase * 0.21);
+        System.out.println("Salário a receber: " + salarioReceber);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class VerificaIdade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o ano de nascimento: ");
+        int nascimento = sc.nextInt();
+        System.out.print("Digite o ano atual: ");
+        int atual = sc.nextInt();
+        int idade = atual - nascimento;
+        System.out.println("Idade: " + idade);
+
+        if (idade >= 18) {
+            sc.nextLine(); // limpar buffer
+            System.out.print("Digite seu nome: ");
+            String nome = sc.nextLine();
+            System.out.println(nome + ", sua entrada foi permitida.");
+        }
+    }
+}
+
+
+
+import java.util.Scanner;
+
+public class Emprestimo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o salário: ");
+        double salario = sc.nextDouble();
+        System.out.print("Digite o valor da prestação: ");
+        double prestacao = sc.nextDouble();
+
+        if (prestacao > salario * 0.15) {
+            System.out.println("Empréstimo não pode ser concedido.");
+        } else {
+            System.out.println("Empréstimo pode ser concedido.");
+        }
+    }
+}
+
+
+
+import java.util.Scanner;
+
+public class SalarioHoraExtra {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Horas trabalhadas no mês: ");
+        int horas = sc.nextInt();
+        System.out.print("Salário por hora: ");
+        double valorHora = sc.nextDouble();
+
+        int horasRegulares = 40 * 4;
+        double salarioTotal;
+
+        if (horas > horasRegulares) {
+            int extras = horas - horasRegulares;
+            salarioTotal = (horasRegulares * valorHora) + (extras * valorHora * 1.5);
+        } else {
+            salarioTotal = horas * valorHora;
+        }
+
+        System.out.println("Salário total: " + salarioTotal);
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class SalarioComComissao {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Salário fixo: ");
+        double fixo = sc.nextDouble();
+        System.out.print("Total de vendas: ");
+        double vendas = sc.nextDouble();
+
+        double comissao;
+        if (vendas <= 1500) {
+            comissao = vendas * 0.07;
+        } else {
+            comissao = 1500 * 0.07 + (vendas - 1500) * 0.03;
+        }
+
+        double salarioFinal = fixo + comissao;
+        System.out.println("Salário total: " + salarioFinal);
+    }
+}
