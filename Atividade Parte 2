@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Exercicios {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. Quesito
+        System.out.println("CONVERSÃO DE DÓLAR PARA REAL");
+        System.out.print("Digite a cotação do dólar: ");
+        double cotacaoDolar = scanner.nextDouble();
+
+        System.out.print("Digite a quantidade de dólares disponíveis: ");
+        double quantidadeDolar = scanner.nextDouble();
+
+        double valorEmReais = cotacaoDolar * quantidadeDolar;
+        System.out.println("Valor em reais: R$" + valorEmReais);
+
+        // 2. Quesito
+        System.out.println("RENDIMENTO DE DEPÓSITO");
+        System.out.print("Digite o valor depositado: ");
+        double deposito = scanner.nextDouble();
+
+        double rendimento = deposito * 0.007; // 0.70%
+        double totalComRendimento = deposito + rendimento;
+        System.out.println("Valor após um mês com rendimento: R$" + totalComRendimento);
+
+        // 3. Quesito
+        System.out.println("CÁLCULO DE PREÇO DE VENDA");
+
+        String[] produtos = {
+            "AÇUCAR",
+            "BANHA",
+            "BATATA INGLESA",
+            "BATATA DOCE",
+            "BISCOITO DE POLVILHO",
+            "BOLACHA DOCE (Tipo maisena)",
+            "BOLACHA SALGADA (Tipo cracker)",
+            "CAFÉ"
+        };
+
+        for (String produto : produtos) {
+            System.out.print("Digite o preço de custo do produto " + produto + ": ");
+            double precoCusto = scanner.nextDouble();
+            double precoVenda = precoCusto + (precoCusto * 0.55);
+            System.out.println("Preço de venda do " + produto + ": R$" + precoVenda);
+        }
+    }
+}
