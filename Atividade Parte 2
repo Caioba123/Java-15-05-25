@@ -1,1 +1,102 @@
+1° Questão
+package Main;
 
+import java.util.Scanner;
+
+public class AtvJava {
+
+	public static void main(String[] args) {
+		
+           Scanner tec = new Scanner(System.in);
+		 
+		 System.out.println("Bem-Vindo a nossa Casa de Câmbio");
+	        
+	        
+	        System.out.println("Escreva quantos dólares quer converter");
+	        int converter1 = tec.nextInt();
+	        
+	      
+	        double valorDolar = 5.68;
+	        
+	        
+	       
+	        double totalDolares = converter1 * valorDolar;
+	   
+	        
+	 
+	        System.out.printf("O valor de %d dólares é equivalente a %.2f reais.%n", converter1, totalDolares);
+	        System.out.println("O valor da cotação do Dolar atualmente é 5.68");
+	
+	}
+
+}
+
+
+2° Questão
+package Main;
+
+import java.util.Scanner;
+
+public class AtvJava {
+
+	public static void main(String[] args) {
+		
+           Scanner tec = new Scanner(System.in);
+		 
+		 System.out.println("Bem-Vindo a nossa Poupança");
+	        
+	        
+	        System.out.println("Quanto deseja inserir na conta?");
+	        int conta = tec.nextInt();
+	        
+	      
+	        double juros = 0.70;
+	        
+	        
+	       
+	        double Mes = conta * 0.70;
+	   
+	        
+	 
+	        System.out.printf("O valor que voce inseriu é " + conta + " Reais", conta);
+	        
+	        System.out.printf(" e ele renderá certa de " + Mes + " Reais ao Mes");
+	        
+	
+	}
+
+}
+
+
+3° Quesito
+
+package Main;
+
+import java.util.Scanner;
+
+public class AtvJava {
+
+	public static void main(String[] args) {
+		
+           Scanner tec = new Scanner(System.in);
+		 
+		   System.out.println("Bem-Vindo ao nosso Mercadinho!");
+		   System.out.println("Temos os seguintes pordutos:");
+		   System.out.println("----------------------------------------");
+		   System.out.println("Açúcar (1kg)	                 R$ 3,89\r\n"
+		   		+ "Banha (500g)	                 R$ 6,50\r\n"
+		   		+ "Batata Inglesa (kg)	         R$ 4,99\r\n"
+		   		+ "Batata Doce (kg)	         R$ 3,49\r\n"
+		   		+ "Biscoito de Polvilho (100g)	 R$ 2,50\r\n"
+		   		+ "Bolacha Salgada                  R$ 5,20\r\n"
+		   		+ "Café (500g)	                 R$ 12,90");
+		   
+		   
+		   
+	        
+	        
+	        
+	
+	}
+
+}
